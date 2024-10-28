@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="resume-form-container">
+        <h1>Resume Generator</h1>
+        <p>By Maidah Murtaza</p>
+        <form>
+            <div class="resume-form">
+
+                <!-- Name -->
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="nameField" placeholder="Enter Here" required>
+                </div>
+                <!-- Contact Number -->
+                <div class="form-control">
+                    <label for="contact">Contact Number</label>
+                    <input type="number" class="form-control" id="contactField" placeholder="Enter Here" required>
+                </div>
+                <!-- Email -->
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="emailField" placeholder="Enter Here" required>
+                </div>
+                <!-- Address -->
+                <div class="form-control">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="addressField" placeholder="Enter Here" required></textarea>
+                </div>
+                <!-- Objective -->
+                <div class="form-control">
+                    <label for="objective">Objective</label>
+                    <textarea class="form-control" id="objectiveField" placeholder="Enter Here" rows="3" required></textarea>
+                </div>
+                <!-- Education -->
+                <div class="form-control" id="educationContainer">
+                    <label for="education">Education</label>
+                    <textarea class="form-control education-field"  placeholder="Enter Here" required></textarea>
+                </div>
+    
+                <!-- New textarea will be generated here dynamically -->
+                
+                <div class="buttonContainer" id="educationFieldAddButton">
+                    <button onclick="addNewEducationField()" class="btn" type="button">Add</button>
+                    <button onclick="deleteNewEducationField()" class="btn" type="button">Delete</button>
+                </div>
+                <!-- Experience -->
+                <div class="form-control" id="experienceContainer">
+                    <label for="experience">Experience</label>
+                    <textarea class="form-control experience-field"  placeholder="Enter Here" required></textarea>
+                </div>
+    
+                <!-- New textarea will be generated here dynamically -->
+    
+                <div class="buttonContainer" id="experienceFieldAddButton">
+                    <button onclick="addNewExperienceField()" class="btn" type="button">Add</button>
+                    <button onclick="deleteNewExperienceField()" class="btn" type="button">Delete</button>
+                </div>
+                <!-- Skills -->
+                <div class="form-control" id="skillsContainer">
+                    <label for="skills">Skills</label>
+                    <textarea class="form-control skills-field" placeholder="Enter Here" required></textarea>
+                </div>
+    
+                <!-- New textarea will be generated here dynamically -->
+    
+                <div class="buttonContainer" id="skillsFieldAddButton">
+                    <button onclick="addNewSkillsField()" class="btn" type="button">Add</button>
+                    <button onclick="deleteNewSkillsField()" class="btn" type="button">Delete</button>
+                </div>
+    
+            </div>
+            <div class="GenerateResumeButtonContainer">
+                <button onclick="generateResume(event)" class="generateResumebtn" type="submit">Generate Resume</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Resume Template -->
+    <div class="container" id="resume-template-container">
+        <div class="resume">
+            <div class="resumeInnerContainer">
+                <div class="personal-information">
+                    <h1 id="nameFieldTemplate">Maida Murtaza</h1>
+                    <div class="seperator"></div>
+                    <p id="addressFieldTemplate">Karachi, Pakistan</p>
+                    <p id="contactFieldTemplate">0365-6515832</p>
+                    <a id="emailFieldTemplate">maidamurtaza820@gmail.com</a>
+                    <div class="seperator"></div>
+                    <p id="objectiveFieldTemplate">Highly motivated and result orientated student seeking a challenging internship to apply strong analytical & programming skills in a real-world setting. Possess a solid foundation in mathematics, statics and computer programming gained through course works and projects. Eager to learn and contribute to a dynamic team enviroment.</p>
+                </div>
+
+                <div class="education-field-template">
+                    <h3>Education</h3>
+                    <div class="bullets">
+                        <ul id="education-field-template">
+                            <li><b>NED University of Engineering & Technology (2022-2026)</b> <br>BS Computational Finance - Undergraduate</li>
+                            <br>
+                            <li><b>GIAIC (2024-2025)</b> <br>Generative AI Engineering - Enrolled</li>
+                        </ul>
+                    </div>
+                        <div class="seperator"></div>
+                </div> 
+        
+                <div class="skills-field-template">
+                    <h3>Skills</h3>
+                    <div class="bullets">
+                        <ul id="skills-field-template">
+                            <li><b>Programming languages: </b>Typescript, Javascript, Python, HTML, CSS</li>
+                            <li><b>Data Analysis: </b>Probability & Statistics, Statistical Inference</li>
+                            <li><b>Software: </b>Familarity with common software (MS Office)</li>
+                            <li><b>Communication: </b>Strong Written and verbal communication skills.</li>
+                        </ul>
+                    </div>
+                    <div class="seperator"></div>
+                </div>
+        
+                <div class="experience-field-template">
+                    <h3>Work Experience</h3>
+                    <div class="bullets">
+                        <ul id="experience-field-template">
+                            <li>Developed mutiple command line interface (CLI) applications using Typescript.</li>
+                            <li>Implemented robust and efficient solution for automation, data processing, and task management.</li>
+                            <li>Utilize Typescript's strong type system to ensure code reliability and scalability.</li>
+                            <li>Focused on modular design patterns, error handling, and user-friendly command-line interactions.</li>
+                        </ul>
+                    </div>
+                    <div class="seperator"></div>
+                </div>   
+                
+                <div class="editResumeButtonContainer">
+                    <button onclick="editResume()" class="editResumebtn">Edit Resume</button>
+                </div>
+                <div class="downloadResumeButtonContainer">
+                    <button onclick="downloadResume()" class="downloadResumebtn">Download Resume</button>
+                </div>
+                <div class="shareResumeButtonContainer">
+                    <button onclick="shareResume()" class="shareResumebtn">Share Resume</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

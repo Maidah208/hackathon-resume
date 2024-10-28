@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Static Resume</title>
+</head>
+<body>
+    <div class="container" id="resume-template-container">
+        <div class="resume">
+            <div class="resumeInnerContainer">
+                <div class="personal-information">
+                    <h1 id="nameFieldTemplate">Maida Murtaza</h1>
+                    <div class="seperator"></div>
+                    <p id="addressFieldTemplate">Karachi, Pakistan</p>
+                    <p id="contactFieldTemplate">0365-6515832</p>
+                    <a id="emailFieldTemplate">maidamurtaza820@gmail.com</a>
+                    <div class="seperator"></div>
+                    <p id="objectiveFieldTemplate">Highly motivated and result orientated student seeking a challenging internship to apply strong analytical & programming skills in a real-world setting. Possess a solid foundation in mathematics, statics and computer programming gained through course works and projects. Eager to learn and contribute to a dynamic team enviroment.</p>
+                </div>
+
+                <div class="education-field-template">
+                    <h3>Education</h3>
+                    <div class="bullets">
+                        <ul id="education-field-template">
+                            <li><b>NED University of Engineering & Technology (2022-2026)</b> <br>BS Computational Finance - Undergraduate</li>
+                            <br>
+                            <li><b>GIAIC (2024-2025)</b> <br>Generative AI Engineering - Enrolled</li>
+                        </ul>
+                    </div>
+                        <div class="seperator"></div>
+                </div> 
+        
+                <div class="skills-field-template">
+                    <h3>Skills</h3>
+                    <div class="bullets">
+                        <ul id="skills-field-template">
+                            <li><b>Programming languages: </b>Typescript, Javascript, Python, HTML, CSS</li>
+                            <li><b>Data Analysis: </b>Probability & Statistics, Statistical Inference</li>
+                            <li><b>Software: </b>Familarity with common software (MS Office)</li>
+                            <li><b>Communication: </b>Strong Written and verbal communication skills.</li>
+                        </ul>
+                    </div>
+                    <div class="seperator"></div>
+                </div>
+        
+                <div class="experience-field-template">
+                    <h3>Work Experience</h3>
+                    <div class="bullets">
+                        <ul id="experience-field-template">
+                            <li>Developed mutiple command line interface (CLI) applications using Typescript.</li>
+                            <li>Implemented robust and efficient solution for automation, data processing, and task management.</li>
+                            <li>Utilize Typescript's strong type system to ensure code reliability and scalability.</li>
+                            <li>Focused on modular design patterns, error handling, and user-friendly command-line interactions.</li>
+                        </ul>
+                    </div>
+                    <div class="seperator"></div>
+                </div>
+                <div id="additional-skills">
+                    <h3>Additional Skills</h3>
+                    <div class="bullets">
+                        <ul>
+                            <li>Financial Modeling: Experienced with Financial Accounting, Cost Accounting, Mathematical Finance.</li>
+                            <li>MS Office: Worked with Microsoft Powerpoint, Microsoft Word and Microsoft Excel for presentation, report writing and financial modeling.</li>
+                        </ul>
+                    </div>    
+                </div>   
+                
+                <div class="toggle-button">
+                    <button onclick="toggleAdditionalSkills()" id="toggle-btn">Hide/UnHide Additional Skills</button>
+                </div>
+                
+            </div>    
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

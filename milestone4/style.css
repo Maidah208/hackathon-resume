@@ -1,0 +1,113 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto; /* Centers horizontally */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1, p{
+    text-align: center;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.form-control label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+.form-control input,
+.form-control textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+.buttonContainer,
+.GenerateResumeButtonContainer, 
+.editResumeButtonContainer{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.btn{
+    margin: auto;
+    text-align: center;
+    border: none;
+    width: 70px;
+    height: 25px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+.generateResumebtn,
+.editResumebtn{
+    margin: auto;
+    width: 140px;
+    height: 30px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+.btn:hover,
+.generateResumebtn:hover,
+.editResumebtn:hover
+{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+#resume-template-container{
+    display: none;
+}
+.resume{
+    width: 90%;
+    margin: 20px auto;
+    padding: 5%;
+    background-color:#fff;
+    border-radius: 8px;
+    color: black;
+}
+
+.seperator{
+    width: 75%;
+    margin: 15px auto;
+    border-bottom: 2px solid rgb(175, 175, 175);
+}
+.personal-information{
+    text-align: center;
+}
+#name, #adddress, #contact, #objectiveField, .skills-field {
+    margin: 4px 0; /* Single line to add space between these elements */
+}
+#email{
+    color: rgb(12, 12, 145);
+    text-decoration: underline;
+}
+h3 { 
+    text-decoration: underline;
+    padding-bottom: 1.5%;
+}
+p{
+    line-height: 20px
+}
+.bullets{
+    margin-left: 7%;
+    line-height: 20px;
+}

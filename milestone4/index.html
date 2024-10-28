@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="resume-form-container">
+        <h1>Editable Resume</h1>     
+        <div class="resume-form">
+
+            <!-- Name -->
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="nameField" placeholder="Enter Here">
+            </div>
+            <!-- Contact Number -->
+            <div class="form-control">
+                <label for="contact">Contact Number</label>
+                <input type="text" class="form-control" id="contactField" placeholder="Enter Here">
+            </div>
+            <!-- Email -->
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="emailField" placeholder="Enter Here">
+            </div>
+            <!-- Address -->
+            <div class="form-control">
+                <label for="address">Address</label>
+                <textarea class="form-control" id="addressField" placeholder="Enter Here"></textarea>
+            </div>
+            <!-- Objective -->
+            <div class="form-control">
+                <label for="objective">Objective</label>
+                <textarea class="form-control" id="objectiveField" placeholder="Enter Here" rows="3"></textarea>
+            </div>
+            <!-- Education -->
+            <div class="form-control" id="educationContainer">
+                <label for="education">Education</label>
+                <textarea class="form-control education-field"  placeholder="Enter Here"></textarea>
+            </div>
+
+            <!-- New textarea will be generated here dynamically -->
+            
+            <div class="buttonContainer" id="educationFieldAddButton">
+                <button onclick="addNewEducationField()" class="btn">Add</button>
+                <button onclick="deleteNewEducationField()" class="btn">Delete</button>
+            </div>
+            <!-- Experience -->
+            <div class="form-control" id="experienceContainer">
+                <label for="experience">Experience</label>
+                <textarea class="form-control experience-field"  placeholder="Enter Here"></textarea>
+            </div>
+
+            <!-- New textarea will be generated here dynamically -->
+
+            <div class="buttonContainer" id="experienceFieldAddButton">
+                <button onclick="addNewExperienceField()" class="btn">Add</button>
+                <button onclick="deleteNewExperienceField()" class="btn">Delete</button>
+            </div>
+            <!-- Skills -->
+            <div class="form-control" id="skillsContainer">
+                <label for="skills">Skills</label>
+                <textarea class="form-control skills-field" placeholder="Enter Here"></textarea>
+            </div>
+
+            <!-- New textarea will be generated here dynamically -->
+
+            <div class="buttonContainer" id="skillsFieldAddButton">
+                <button onclick="addNewSkillsField()" class="btn">Add</button>
+                <button onclick="deleteNewSkillsField()" class="btn">Delete</button>
+            </div>
+
+        </div>
+        <div class="GenerateResumeButtonContainer">
+            <button onclick="generateResume(event)" class="generateResumebtn">Generate Resume</button>
+        </div>
+    </div>
+
+    <!-- Resume Template -->
+    <div class="container" id="resume-template-container">
+        <div class="resume">
+            <div class="resumeInnerContainer">
+                <div class="personal-information">
+                    <h1 id="nameFieldTemplate"></h1>
+                    <div class="seperator"></div>
+                    <p id="addressFieldTemplate"></p>
+                    <p id="contactFieldTemplate"></p>
+                    <a id="emailFieldTemplate"></a>
+                    <div class="seperator"></div>
+                    <p id="objectiveFieldTemplate"></p>
+                </div>
+
+                <div class="education-field-template">
+                    <h3>Education</h3>
+                    <div class="bullets">
+                        <ul id="education-field-template">
+                        </ul>
+                    </div>
+                        <div class="seperator"></div>
+                </div> 
+        
+                <div class="skills-field-template">
+                    <h3>Skills</h3>
+                    <div class="bullets">
+                        <ul id="skills-field-template">
+                        </ul>
+                    </div>
+                    <div class="seperator"></div>
+                </div>
+        
+                <div class="experience-field-template">
+                    <h3>Work Experience</h3>
+                    <div class="bullets">
+                        <ul id="experience-field-template">
+                        </ul>
+                    </div>
+                    <div class="seperator"></div>
+                </div>   
+                
+                <div class="editResumeButtonContainer">
+                    <button onclick="editResume()" class="editResumebtn">Edit Resume</button>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
